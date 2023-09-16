@@ -45,9 +45,6 @@ export class ProductsController {
   @Get(':productId')
   @HttpCode(HttpStatus.ACCEPTED)
   getOne(@Param('productId', ParseIntPipe) productId: number) {
-    // response.status(200).send({
-    //   message: `product ${productId}`,
-    // });
     return this.productsService.findOne(productId);
   }
 
