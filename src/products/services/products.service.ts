@@ -17,7 +17,7 @@ export class ProductsService {
 
   findAll() {
     return this.productRepo.find({
-      relations: ['brand', 'categories'],
+      relations: ['brand'],
     });
   }
 
