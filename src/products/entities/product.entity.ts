@@ -6,6 +6,7 @@ import {
   UpdateDateColumn,
   ManyToOne,
   ManyToMany,
+  JoinTable,
 } from 'typeorm';
 
 import { Brand } from './brand.entity';
@@ -47,5 +48,6 @@ export class Product {
   brand: Brand;
 
   @ManyToMany(() => Category, (category) => category.products)
+  // @JoinTable()
   categories: Category[];
 }
